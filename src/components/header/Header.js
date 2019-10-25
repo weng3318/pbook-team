@@ -33,29 +33,29 @@ export default class Header extends React.Component {
 
 
     handleLoginButton = (event) => {
-        if (this.state.id === "") window.location.href = '/login'
+        if (this.state.id === "") {
+            window.location.href = '/login'
+        } else {
+            let loginButton = event.currentTarget
+            let loginImg = loginButton.querySelector(".loginImg")
+            let loginText = loginButton.querySelectorAll(".loginText")
 
-        let loginButton = event.currentTarget
-        let loginImg = loginButton.querySelector(".loginImg")
-        let loginText = loginButton.querySelectorAll(".loginText")
-
-        loginButton.classList.add('transition')
-        loginButton.classList.toggle('long')
-        setTimeout(() => {
-            loginImg.classList.toggle('show')
-            for (let i = 0; i < loginText.length; i++) {
-                loginText[i].classList.toggle('show')
-            }
-        }, 200)
+            loginButton.classList.add('transition')
+            loginButton.classList.toggle('long')
+            setTimeout(() => {
+                loginImg.classList.toggle('show')
+                for (let i = 0; i < loginText.length; i++) {
+                    loginText[i].classList.toggle('show')
+                }
+            }, 200)
+        }
     }
 
     handleStopPropagation = (event) => {
         event.stopPropagation()
     }
 
-    handleLogout = (event) => {
-        event.stopPropagation()
-
+    handleLogout = () => {
         swal({
             title: "您確定要登出嗎?",
             icon: "warning",
@@ -66,7 +66,7 @@ export default class Header extends React.Component {
                 if (willDelete) {
                     swal("您已經成功登出!", {
                         icon: "success",
-                    });
+                    })
                     setTimeout(() => {
                         this.setState({
                             hasData: false,
@@ -99,7 +99,7 @@ export default class Header extends React.Component {
         //         level: "品書學徒",
         //         loginImg: "./images/yoko.jpg",
         //     })
-        // }, 1000)
+        // }, 5000)
 
         // 品書通知的東西
         // load()
@@ -109,7 +109,7 @@ export default class Header extends React.Component {
         //         //console.log("允許");
         //         notification = new Notification("品書通知", {
         //             body: "Notification Demo...",
-        //             icon: require('./images/yoko.jpg')
+        //             icon: require('./images/P_logo.png')
         //         });
         //     } else if (Notification.permission === "default") {
         //         console.log("要求權限");
@@ -131,7 +131,7 @@ export default class Header extends React.Component {
         if (this.state.id !== "") phoneMemberStatus = "block"
         let phoneVisitorStatus = "block"
         if (this.state.id !== "") phoneVisitorStatus = "none"
-          
+
         return (
             <>
                 <img src={require('./images/header.jpg')} className="img-fluid header-img" alt="" />
