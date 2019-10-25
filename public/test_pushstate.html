@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="p">push</button>
+
+    <script>
+        const p = $('#p');
+        let i = 1;
+        p.click(function () {
+            i++;
+            history.pushState({ i: i }, 't' + i, '/page' + i);
+        });
+
+        window.onpopstate = function (event) {
+            console.log(history.state);            
+        };
+
+    </script>
+
+</body>
+
+</html>
