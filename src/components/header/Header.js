@@ -91,15 +91,17 @@ export default class Header extends React.Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                id: "000",
-                name: "橫山裕",
-                level: "品書學徒",
-                loginImg: "./images/yoko.jpg",
-            })
-        }, 1000)
+        // 模擬會員登入後的狀態
+        // setTimeout(() => {
+        //     this.setState({
+        //         id: "000",
+        //         name: "橫山裕",
+        //         level: "品書學徒",
+        //         loginImg: "./images/yoko.jpg",
+        //     })
+        // }, 1000)
 
+        // 品書通知的東西
         // load()
         // var notification;
         // function load() {
@@ -117,7 +119,6 @@ export default class Header extends React.Component {
         //     }
         //     console.log(notification);
         // }
-
         // function getPermission(cb) {
         //     Notification.requestPermission(cb);
         // }
