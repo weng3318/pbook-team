@@ -28,7 +28,6 @@
   color: #ffffff;
 }
 
-
 .loginButton {
   min-width: 6%;
   min-height: 7vw;
@@ -69,6 +68,15 @@
   .loginButton {
     display: none !important;
   }
+
+  .logo {
+    top: 5vw;
+    right: 44vw;
+    min-width: 15%;
+    min-height: 10vw;
+    background: url(./images/pbook_logo_black.png) center center no-repeat;
+    background-size: cover;
+  }
 }
 
 /* 主功能按鈕 */
@@ -82,7 +90,6 @@
   color: #fff !important;
   text-decoration: none !important;
 }
-
 
 .titleEn {
   font-size: 0.8vw !important;
@@ -157,13 +164,13 @@
   }
 
   .a {
-    color:#2d3a3a;
+    color: #2d3a3a;
     display: block;
     padding: 10px 12px;
   }
 
   .a:hover {
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: none;
     background: #ffc408;
   }
@@ -210,5 +217,3 @@
 .transition {
   transition: 0.5s;
 }
-
-
