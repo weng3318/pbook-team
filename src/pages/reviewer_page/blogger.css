@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+.titleText {
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.wrapper {
+    background: #eee;
+    border: 2px solid #f24;
+    width: 100vw;
+    height: 100vh;
+}

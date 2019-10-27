@@ -6,7 +6,7 @@ function Footer() {
             width: "100vw",
             background: "#cde2d0",
             textAlign: "center",
-            height: "35px",
+            height: "50px",
             fontSize: "0.5vw",
             "display": "flex",
             justifyContent: "center",

@@ -135,7 +135,7 @@ export default class Header extends React.Component {
         return (
             <>
                 <img src={require('./images/header.jpg')} className="img-fluid header-img" alt="" />
-
+                
                 <Router>
                     <Link to="/" className="logo position-absolute pointer"></Link>
 
@@ -192,9 +192,13 @@ export default class Header extends React.Component {
                             <div className="bar bar2"></div>
                             <div className="bar bar3"></div>
                             <ul>
+                            
+                                {/* display表示要不要顯示 */}
                                 <li style={{ display: phoneVisitorStatus }}><Link to="/login" className="a">登入</Link></li>
+                                {/* this.state.name 會顯示登入id */}
                                 <li style={{ display: phoneMemberStatus }}><Link to="/member" className="a">{this.state.name}</Link></li>
                                 <li style={{ display: phoneMemberStatus }}><Link to="/game" className="a">二手書配對</Link></li>
+                                <li style={{ display: 'Arwen' }}><Link to="/reviewer" className="a">阿文</Link></li>
                                 <li><Link to="/cart" className="a">購物車</Link></li>
                                 <li><Link to="/reviewer" className="a">書評家</Link></li>
                                 <li><Link to="/books" className="a">書籍商城</Link></li>
