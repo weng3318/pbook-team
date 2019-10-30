@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class TestAdd_01 extends React.Component {
+class TodoWith extends React.Component {
     constructor(props) { // 在建構函式設定state的初始值
       super(props);
       this.state = {
@@ -14,7 +14,7 @@ class TestAdd_01 extends React.Component {
         <>                                 {/* ref抓取 */}
           <input style={{position:'relative',left:'50%',transform:'translate(-50%,0%)'}} type="text" name="qq" ref={this.inputRef}/>                    
           {/* 觸發函式 */}
-          <button style={{position:'relative',left:'50%',transform:'translate(-230%,0%)'}} type="button" onClick={this.addItem}>ADD</button>
+          <button style={{position:'relative',left:'50%',transform:'translate(-230%,0%)'}} type="button" onClick={this.addItem}>留言</button>
 
           <ul>{/* 動態虛擬生成 */}
             {arr.map((v)=>
@@ -46,4 +46,4 @@ class TestAdd_01 extends React.Component {
 
   }
 
-export default TestAdd_01
+export default TodoWith

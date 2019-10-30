@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            color: #fff
+        }
+        body{
+            background: #eee;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            background: #ff3d4a;
+            border-radius: 50%;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+        }
+        #rect{
+            background: #333;
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="rect"></div>
+    <script>
+            // function asyncFunction(value){
+            //     return new promise(function(resolve,reject){
+            //         if (value)
+            //            resolve(value) //成功
+            //         else
+            //            reject(value) // 失敗
+            //     })
+            // }
+
+            // const promise = new promise()            
+            
+                let rect = document.querySelector('#rect')
+                let x,y,n,i,k
+                n=0
+                for (k =0; k<6; k++){
+                for (i =0; i<6; i++,n++){
+                    b = document.createElement('ball')
+                    b.className = 'ball'
+                    b.innerHTML += n
+                    b.style.left =  i*50+'px'
+                    b.style.top =  k*50+'px'
+                    rect.appendChild(b)
+                }
+            }
+                </script>
+</body>
+</html>
