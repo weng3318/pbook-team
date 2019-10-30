@@ -1,14 +1,20 @@
 * {
     box-sizing: border-box;
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
 }
 .titleText {
-    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 .wrapper {
-    background: #eee;
-    border: 2px solid #f24;
+    background: #777;
+    border: 1px solid #f24;
     width: 100vw;
     height: 100vh;
 }
+.navbar{
+    width: 100vw;
+    height: 50px;
+    background: #cde2d0;
+}
+.effect

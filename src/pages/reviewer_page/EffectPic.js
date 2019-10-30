@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-export class Navbar extends Component {
+export class EffectPic extends Component {
     render() {
         return (
             <>
-                <nav className="navbar"></nav>
+                
             </>
         )
     }
 }
 
-export default Navbar
+export default EffectPic

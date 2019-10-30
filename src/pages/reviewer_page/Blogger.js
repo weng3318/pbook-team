@@ -6,7 +6,6 @@ import '../reviewer_page/blogger.css'
 function Blogger() {
     return (
         <>
-         <h1 className="titleText"></h1>
          <section className="wrapper"></section>
         </>
     )
