@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Activities = () => {
+const BR_Activities = () => {
     return (
         <>
             <h1>品書活動</h1>
@@ -8,4 +8,4 @@ const Activities = () => {
     )
 }
 
-export default Activities
+export default BR_Activities

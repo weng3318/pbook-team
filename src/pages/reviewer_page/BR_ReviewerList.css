@@ -1,0 +1,97 @@
+* {
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+    position:relative;
+    box-sizing: border-box;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+}
+h5{
+    text-align: center;
+    color: #fff;
+}
+/* 紅色邊線 */
+.borderLine {
+    border: 1px solid #f24;
+}
+/* 麵包屑(Breadcrumbs) */
+.navbar{
+    width: 100vw;
+    height: 40px;
+    background: #cde2d0;
+    line-height: 0;
+    color: #2d3a3a;
+    overflow: hidden;
+    /* text-overflow:ellipsis; */
+    /* overflow : hidden; */
+    font-size: 12px;
+    white-space: nowrap;
+}
+/* 書評家、背景圖片(參照)*/
+.reviewerList {
+    background: #fff;
+    max-width: 1200px;
+    min-height: 2050px;
+    margin: 0 auto;
+    background: url(../reviewer_page/images/01_書評家.png) center center;
+    background-size:cover;
+}
+/* 偽元素遮罩 */
+.reviewerList::after{
+    content: "";
+    display: block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+}
+/* 頭像 */
+.brAvatar{
+    z-index:1;
+    max-width: 240px;
+    height: 320px;
+}
+.brAvatarImg{
+    min-width: 100px;
+    width: 100%;
+}
+/* 自我介紹 */
+.brInfo{
+    z-index:1;
+    width: 500px;
+    height: 321px;
+}
+/* 介紹內文限制8行 */
+.brInfoText{
+    color: #fff;
+    min-width: 240px;
+    margin: 0 40px;
+    padding: 5px;
+    overflow : hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+/* 看看書櫃 */
+.brDesk{
+    z-index:1;
+    width: 460px;
+    height: 321px;
+}
+/* 書櫃封面 */
+.brDeskBook{
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    width: 160px;
+    /* width: 100%; */
+}
+/* YouTube影片連結 */
+.brYouTube{
+    position: absolute;
+    left: 165px;
+    top: 30px;
+}

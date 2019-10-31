@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class DateTime extends Component {
+export class BR_DateTime extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -39,4 +39,4 @@ export class DateTime extends Component {
   }
 }
 
-export default DateTime
+export default BR_DateTime

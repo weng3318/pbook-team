@@ -1,24 +1,23 @@
 import React, { Component } from 'react'
 
-class TodoWith extends React.Component {
+class BR_TodoWith extends React.Component {
     constructor(props) { // 在建構函式設定state的初始值
       super(props);
-      this.state = {
-        arr: [],
-      };
+      this.state = { arr:[]};
       this.inputRef = React.createRef(); // 在建構函式創建refs屬性
     }
     render() {
-      const { arr } = this.state;//上方陣列
       return (　
         <>                                 {/* ref抓取 */}
-          <input style={{position:'relative',left:'50%',transform:'translate(-50%,0%)'}} type="text" name="qq" ref={this.inputRef}/>                    
+          <input style={{position:'relative',left:'50%',transform:'translate(-50%,0%)'}} type="text" name="qq" 
+          ref={this.inputRef}/>                    
           {/* 觸發函式 */}
-          <button style={{position:'relative',left:'50%',transform:'translate(-230%,0%)'}} type="button" onClick={this.addItem}>留言</button>
+          <button style={{position:'relative',left:'50%',transform:'translate(-168%,0%)'}}
+           type="button" onClick={this.addItem}>記事本</button>
 
           <ul>{/* 動態虛擬生成 */}
-            {arr.map((v)=>
-            <li style={{textAlign:'center'}} key={`item_${v}`}>{v}</li>
+            {this.state.arr.map((v)=>
+            <p style={{textAlign:'center'}} key={`item_${v}`}>{v}</p>
             )}
           </ul>
         </>
@@ -46,4 +45,4 @@ class TodoWith extends React.Component {
 
   }
 
-export default TodoWith
+export default BR_TodoWith
