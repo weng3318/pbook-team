@@ -16,6 +16,9 @@ import Logout from '../../pages/Logout'
 import Cart from '../../pages/Cart'
 import NoPage from '../../pages/nopage/NoPage'
 
+// ------------------------------------------------------
+import ReviewerBooks from '../../pages/ReviewerBooks'
+// ------------------------------------------------------
 import './header.css'
 
 
@@ -159,6 +162,13 @@ export default class Header extends React.Component {
 
 
                     <section className="d-flex justify-content-center titleButton">
+                    {/* ------------------------------------------------------------ */}
+                        <Link to="/reviewerBooks" className="text-center pointer">
+                            <span className="titleZh">看看書櫃</span>
+                            <br />
+                            <span className="titleEn">REVIEWERBOOKS</span>
+                        </Link>
+                    {/* ------------------------------------------------------------ */}
                         <Link to="/reviewer" className="text-center mx-4 pointer">
                             <span className="titleZh">書評家</span>
                             <br />
@@ -211,6 +221,9 @@ export default class Header extends React.Component {
                     </section>
 
                     <Switch>
+                    {/* ------------------------------------------------------------ */}
+                        <Route exact path="/reviewerBooks" component={ReviewerBooks} />
+                    {/* ------------------------------------------------------------ */}
                         <Route exact path="/" component={Home} />
                         <Route exact path="/reviewer" component={Reviewer} />
                         <Route exact path="/books" component={Books} />
