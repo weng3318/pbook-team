@@ -2,7 +2,7 @@
     font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
     position:relative;
     box-sizing: border-box;
-    font-size: 21px;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
     z-index: 1;
@@ -12,23 +12,16 @@ h5{
     color: #fff;
 }
 p{
-    font-size: 16px;
+    font-size: .8rem;
     margin: 16px auto;
     color: rgba(255,255,255,.6);
 }
 /* 看看書櫃，文字超連結 */
-.textReadBook{
-    font-size: 21px;
+.textMedia{
+    font-size: 1.2rem;
     text-align: center;
     color: rgba(255,255,255);
-    line-height: 0;
-}
-.textReadVideo{
-    font-size: 21px;
-    text-align: center;
-    color: rgba(255,255,255);
-    line-height: 0;
-    top: 10px;
+    margin: 0;
 }
 /* 紅色邊線 */
 .borderLine {
@@ -68,7 +61,7 @@ p{
     bottom:0;
     width:100%;
 }
-/* 看看書櫃，效果圖片(參照用)*/
+/* 書評列表，效果圖片(參照用)*/
 .reviewerBooks {
     background: #fff;
     max-width: 1200px;
@@ -77,7 +70,7 @@ p{
     background: url(../reviewer_page/images/02_看看書櫃.png) center center;
     background-size:cover;
 }
-/* 看看書櫃，偽元素遮罩 */
+/* 書評列表，偽元素遮罩 */
 .reviewerBooks::after{
     content: "";
     display: block;
@@ -89,87 +82,68 @@ p{
     bottom:0;
     width:100%;
 }
-
-
-/* 頭像區域 */
+/* 頭像區域，縮放限制*/
 .brAvatarBox{
-    max-width: 140px;
-    height: 320px;
+    min-width: 120px;
+    max-width: 240px;
+}
+/* 介紹區 ，縮放限制*/
+.brInfoBox{
+    min-width: 300px;
+    max-width: 600px;
+}
+/* 影片區，縮放限制 */
+.brMyVideoBox{
+    min-width: 20%;
+    max-width: 33%;
+}
+/* 書櫃區，縮放限制 */
+.brMyBooksBox{
+    min-width: 150px;
+    background: #000;
+}
+.brMyBooks{
+    width: 100%;
+    height: 100%;
+    background: url(../reviewer_page/images/01書_說話之道.png) center center no-repeat;
+    border:1px solid #f24;
+    /* background-size: contain; */
+    background-size: cover;
 }
 /* 頭像圖片 */
 .brAvatarImg{
     width: 100%;
 }
-
-/* 自我介紹區域 */
-.brInfoBox{
-    width: 500px;
-    height: 321px;
-}
 /* 介紹內文限制8行 */
 .brInfoText{
     color: #fff;
-    min-width: 240px;
-    margin: 0 40px;
-    padding: 5px;
+    margin: 0 10px;
     overflow : hidden;
     display: -webkit-box;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
 }
-
-
-/* 列表區域 */
+/* 列表的全部區域，RWD狀態控制 */
 .ReviewerListAllBox{
     display: flex;
 }
-/* 列表區域，RWD */
-@media (max-width: 768px) {
+@media (max-width: 540px) {
     .ReviewerListAllBox {
         display: inline-block;
     }
 }
-/* 看看書櫃，全區域 */
+/* 右側媒體區，縮放限制*/
 .brMediaBox{
-    background: #000;
-    width: 460px;
-    height: 321px;
+    min-width: 300px;
 }
-/* 書櫃區 */
-.brMyBooks{
-    background: #f24;
-    width: 160px;
-    height: 200px;
-}
-/* 書櫃封面 */
-.brDeskBook{
+
+/* 社群及追蹤作者的icon屬性 */
+.brIcon{
     width: 100%;
-}
-/* 影片區 */
-.brMyVideo{
-    width: 300px;
-    height: 200px;
-}
-/* 影片擺放位置 */
-.brYouTube{
-    top: 10px;
-    left: 20px;
-}
-/* 社群及追蹤作者區域 */
-.brIconBox{
-    background: #000;
-    width: 100%;
-    margin: 10px auto;
-    justify-content: space-between;
-}
-/* 社群分享 */
-.brIconCommunity{
-    width: 150px;
-    margin: 0 12px;
-    justify-content: space-around;
+    margin: 5px ;
 }
 /* 追蹤作者 */
 .brIconFollow{
-    width: 200px;
-    margin: 0 36px 0 0;
+    top: 20px;
+    justify-content: center;
 }
