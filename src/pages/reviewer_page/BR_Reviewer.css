@@ -136,14 +136,13 @@ p{
 .brMediaBox{
     min-width: 300px;
 }
-
 /* 社群及追蹤作者的icon屬性 */
-.brIcon{
-    width: 100%;
-    margin: 5px ;
+.brIconBox{
+    width: 200px;
+    margin: 0 auto;
 }
 /* 追蹤作者 */
-.brIconFollow{
-    top: 20px;
-    justify-content: center;
+.brIcon{
+    width: 100%;
+    padding: 10px;
 }

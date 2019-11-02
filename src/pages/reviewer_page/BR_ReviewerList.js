@@ -13,7 +13,7 @@ export class BR_ReviewerList extends React.Component {
 
           <div className="brAvatarBox borderLine">
               <img className="brAvatarImg" src={require('../reviewer_page/images/31桑.png')}/>
-              <h5>書評家<p>小說家、編劇、總編輯</p></h5>
+              <h5>書評家<p>{this.props.type}</p></h5>
           </div>
 
           <div className="brInfoBox borderLine"><h5>書評家簡介</h5>
@@ -47,17 +47,13 @@ export class BR_ReviewerList extends React.Component {
             <Link to="/reviewerBooks">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/uVIpHQMzvR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Link>
-        </div>
-
-
-
-        {/* <div className="brIconFollow d-flex borderLine">
-              <img className="brIcon" src={require('../reviewer_page/images/icon_youtube.png')}/>
+        <div className="brIconBox d-flex borderLine">
+              {/* <img className="brIcon" src={require('../reviewer_page/images/icon_youtube.png')}/>
               <img className="brIcon" src={require('../reviewer_page/images/icon_facebook.png')}/>
-              <img className="brIcon" src={require('../reviewer_page/images/icon_twitter.png')}/>
+              <img className="brIcon" src={require('../reviewer_page/images/icon_twitter.png')}/> */}
               <img className="brIcon" src={require('../reviewer_page/images/icon_follow.png')}/>
-        </div> */}
-
+        </div>
+        </div>
 
 </section>
         {/* <Router>
