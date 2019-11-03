@@ -1,0 +1,202 @@
+* {
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+    position:relative;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+h5{
+    text-align: center;
+    color: #fff;
+}
+/* 書評家的職業介紹 (文字) */
+.AvatarInfo{
+    bottom: 8px;
+    margin: 5px;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/* 我的書櫃 (文字) */
+.textMedia{
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(255,255,255);
+    margin: 0;
+}
+/* 麵包屑(Breadcrumbs) */
+.navbar{
+    width: 100vw;
+    height: 40px;
+    background: #cde2d0;
+    line-height: 0;
+    color: #2d3a3a;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* 紅色邊線，參照用 */
+.borderLine {
+    border: 1px solid #f24;
+}
+/* 書評列表，效果圖片(參照用)*/
+.reviewerList {
+    background: #fff;
+    max-width: 1200px;
+    min-height: 2050px;
+    margin: 0 auto;
+    background: url(../reviewer_page/images/01_書評家.png) center center;
+    background-size:cover;
+}
+/* 書評總列表，偽元素遮罩 */
+.reviewerList::after{
+    content: "";
+    display: block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+}
+/* 我的書櫃，效果圖片(參照用)*/
+.reviewerBooks {
+    background: #fff;
+    max-width: 1200px;
+    min-height: 2050px;
+    margin: 0 auto;
+    background: url(../reviewer_page/images/02_看看書櫃.png) center center;
+    background-size:cover;
+}
+/* 我的書櫃，偽元素遮罩 */
+.reviewerBooks::after{
+    content: "";
+    display: block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+}
+/* 頭像區域，縮放限制*/
+.brAvatarBox{
+    min-width: 120px;
+    max-width: 210px;
+}
+/* 頭像圖片 RWD */
+.brAvatarImg{
+    width: 100%;
+}
+/* 書評家簡介區，縮放限制*/
+.brInfoBox{
+    min-width: 265px;
+    max-width: 600px;
+}
+/* 書評家簡介(文字)，限制行數 */
+.brInfoText{
+    font-size: 1rem;
+    margin: 16px;
+    color: rgba(255,255,255,.7);
+    overflow : hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    text-overflow: "----"; 
+}
+/* 書評影片區，縮放限制 #因為youTube的auto尺寸為最大所以區域限制用百分比設定*/
+.brMyVideoBox{
+    min-width: 20%;
+    max-width: 33%;
+}
+/* 我的書櫃區(圖片)，縮放限制 */
+.brMyBooksBox{
+    /* min-width: 79px; */
+    min-width: 100px;
+    max-width: 183px;
+}
+/* 我的書櫃(圖片) RWD */
+.brMyBooks{
+    width: 100%;
+    border:1px solid #f24;
+    margin: 10x;
+}
+/* 點擊圖示區，限制大小，位置控制 */
+.brIconFollowBox{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 點擊圖示區，限制大小，位置控制 */
+.brIconBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 追蹤作者，按鈕 */
+.brIconFollow{
+    width: 60%;
+    padding: 5px;
+}
+/* 分享圖示，按鈕 */
+.brIconShare{
+    width: 26%;
+    padding: 5px;
+}
+
+/* 列表的全部區域，RWD狀態控制 ---------------------------------------- */
+.ReviewerListAllBox{
+    display: flex;
+}
+/* 追蹤作者，先隱藏的按鈕 */
+.brIconFollowHidden{
+    display: none;
+    width: 100%;
+    padding: 2px;
+}
+/* 追蹤作者，先隱藏的按鈕區 */
+.brIconFollowHiddenBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 786px) {
+    /* RWD 全區狀態 */
+    .ReviewerListAllBox {
+        display: inline-block;
+    }
+    /* 分享按鈕，內距調整 */
+    .brIconShare{
+        padding: 2px;
+    }
+    /* 初始追蹤作者，按鈕隱藏 */
+    .brIconFollow{
+        display: none;
+    }
+    /* 追蹤作者按鈕，調整位置並顯示 */
+    .brIconFollowHidden{
+        display: inline-block;
+    }
+    .brYouTubeRWD{
+        width: 100%;
+    }
+}
