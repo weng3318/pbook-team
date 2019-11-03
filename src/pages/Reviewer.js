@@ -10,18 +10,18 @@ import ReviewerBooks from '../pages/ReviewerBooks'
 
 
 function Reviewer (){
-
     const getBooks = () => {
         const books = [
-            { type: '小說家、編劇、總編輯', name: '阿文', book: '哈利波特'},
-            { type: 'A', name: '阿德0', book: '速度'},
-            { type: 'B', name: '想想', book: '老婆'},
-            { type: 'C', name: 'YO', book: 'AA'},
-            { type: 'D', name: 'joe', book: 'BB'},
-            { type: 'E', name: '小姚', book: '哈利波CC特'},
+            { level: '★ 書評家 ★', type: '小說家、導演、總編輯', name: '阿文', book: '哈利波特'},
+            { level: '★ 書評家 ★', type: '小說家、編劇、工程師', name: '阿德', book: '素肚黑肉男'},
+            { level: '★ 書評家 ★', type: '小說家、編劇、董事長', name: '享享', book: '大賢者'},
+            { level: '★ 書評家 ★', type: '小說家、編劇、體育老師', name: 'YO桑', book: '老菌俠'},
+            { level: '★ 書評家 ★', type: '小說家、編劇、音樂老師', name: '伊藤正樹', book: '滷蛋騎士'},
+            { level: '★ 書評家 ★', type: '小說家、編劇、美術老師', name: 'Amy', book: '迷妹'},
         ];
-        // return books.map(({ type, name, book }) => <BR_ReviewerList type={type} name={name} book={book}/>);
-        return books.filter(({ name }) => name === '阿德0').map(({ type, name, book }) => <BR_ReviewerList type={type} name={name} book={book}/>);
+        // return books.map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
+        return books.filter(({name}) => ('阿德' === name)).map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
+        // return books.filter(({ name }) => name === '阿德').map(({ level, name, book }) => <BR_ReviewerList level={level} name={name} book={book}/>);
     };
   
     return (
@@ -31,6 +31,10 @@ function Reviewer (){
         <BR_TodoWith />
         <BR_Navbar />
         <section className="reviewerList borderLine">
+        {getBooks()}
+        {getBooks()}
+        {getBooks()}
+        {getBooks()}
         {getBooks()}
         </section>
         </>
