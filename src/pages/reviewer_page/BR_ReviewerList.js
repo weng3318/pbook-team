@@ -13,16 +13,16 @@ export class BR_ReviewerList extends React.Component {
 
 
           <div className="brAvatarAllBox borderLine">
-              <h5>{this.props.name}</h5>
-              <div className="AvatarInfo">{this.props.level}</div>
+              <h5>{this.props.level}</h5>
                   
               <img className="brAvatarImg" src={require('../reviewer_page/images/31桑.png')}/>
+              <h5>{this.props.name}</h5>
 
-              <div className="brIconBox borderLine">
+              <div className="brIconBox">
                   <div className="AvatarInfo">{this.props.type}</div>
               </div>
 
-              <Link to="/reviewerBooks" className="d-flex justify-content-center">
+              <Link to="/reviewerBooks" className="d-flex justify-content-center borderLineTop">
               <div className="brIconBox">
                 <img src={require('../reviewer_page/images/P_logo.png')}/>
               </div>
@@ -30,13 +30,13 @@ export class BR_ReviewerList extends React.Component {
               </Link>
               
               <Link>
-              <div className="brIconBox borderLine">
+              <div className="brIconBox borderLineTop">
                   <img className="brIconFollow" src={require('../reviewer_page/images/icon_follow.png')}/>
               </div>
               </Link>
 
               <Link>
-              <div className="brIconBox borderLine">
+              <div className="brIconBox borderLineTop">
                     <img className="brIconShare" src={require('../reviewer_page/images/icon_youtube.png')}/>
                     <img className="brIconShare" src={require('../reviewer_page/images/icon_facebook.png')}/>
                     <img className="brIconShare" src={require('../reviewer_page/images/icon_twitter.png')}/>
@@ -65,7 +65,7 @@ export class BR_ReviewerList extends React.Component {
                 </div>
           </div>
     </div>
-        <iframe className="brYouTubeRWD" width="50%" height="auto" src="https://www.youtube.com/embed/uVIpHQMzvR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className="brYouTubeRWD borderLine" width="50%" height="auto" src="https://www.youtube.com/embed/uVIpHQMzvR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
         <div style={{height:'30px'}}></div>

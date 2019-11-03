@@ -17,6 +17,9 @@ h5{
 .borderLine {
     border: 3px solid #2d3a3a;
 }
+.borderLineTop {
+    border-top:3px solid #2d3a3a;
+}
 /* 麵包屑(Breadcrumbs) */
 .navbar{
     width: 100%;

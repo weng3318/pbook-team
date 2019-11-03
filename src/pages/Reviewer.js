@@ -21,7 +21,6 @@ function Reviewer (){
         ];
         // return books.map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
         return books.filter(({name}) => ('阿德' === name)).map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
-        // return books.filter(({ name }) => name === '阿德').map(({ level, name, book }) => <BR_ReviewerList level={level} name={name} book={book}/>);
     };
   
     return (
