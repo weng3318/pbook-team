@@ -5,14 +5,11 @@ import BR_TodoWith from './reviewer_page/BR_TodoWith'
 import BR_DateTime from './reviewer_page/BR_DateTime'
 import BR_Navbar from './reviewer_page/BR_Navbar'
 
-import Home from '../pages/Home'
-import ReviewerBooks from '../pages/ReviewerBooks'
-// json-server todo
-// import {data} from '../pages/reviewer_page/data/reviewer_books'
-import Data from '../pages/reviewer_page/data/reviewer_data'
+import Home from './Home'
+import ReviewerBooks from './ReviewerBooks'
+import {data} from '../pages/reviewer_page/data/reviewer_books'
 
-const Reviewer =(props)=>{
-    console.log(Data)
+function Reviewer (){
     const getBooks = () => {
         const books = [
             { id:'1', level: '★ 書評家 ★', type: '小說家、導演、總編輯', name: '阿文', book: '哈利波特'},
@@ -27,18 +24,6 @@ const Reviewer =(props)=>{
     };
   
     return (
-        // <>
-        // 裝在我的書櫃上
-        // {Data.map((value)=>{
-        //     return (
-        //         <Link key={value.id} 
-        //         to={'/ReviewerBooks/'+value.id} >
-        //             {value.name}
-        //         </Link>
-        //     )
-        // })}
-        // </>
-
         <Router>
         <>
         <h1>書評家</h1>

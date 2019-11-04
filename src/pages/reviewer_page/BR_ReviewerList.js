@@ -7,6 +7,7 @@ import '../reviewer_page/BR_Reviewer.css'
 export class BR_ReviewerList extends React.Component {
   render() {
     return (
+<Router>
       <>   
 <section className="ReviewerListAllBox">
     <div className="d-flex">
@@ -67,14 +68,13 @@ export class BR_ReviewerList extends React.Component {
     </div>
         <iframe className="brYouTubeRWD borderLine" width="50%" height="auto" src="https://www.youtube.com/embed/uVIpHQMzvR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
-
         <div style={{height:'30px'}}></div>
-        {/* <Router>
+
          <Switch>
-          <Route exact path="/reviewerBooks" component={ReviewerBooks} />     
+          <Route exact path="/reviewerBooks/:id?" component={ReviewerBooks} />     
          </Switch>
-        </Router> */}
       </>
+        </Router>
     )
   }
 }
