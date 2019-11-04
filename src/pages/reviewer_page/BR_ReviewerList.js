@@ -5,7 +5,7 @@ import ReviewerBooks from '../../pages/ReviewerBooks';
 import '../reviewer_page/BR_Reviewer.css'
 
 export class BR_ReviewerList extends React.Component {
-  render() {
+  render(props) {
     return (
 <Router>
       <>   
@@ -70,9 +70,9 @@ export class BR_ReviewerList extends React.Component {
 </section>
         <div style={{height:'30px'}}></div>
 
-         <Switch>
+         {/* <Switch>
           <Route exact path="/reviewerBooks/:id?" component={ReviewerBooks} />     
-         </Switch>
+         </Switch> */}
       </>
         </Router>
     )

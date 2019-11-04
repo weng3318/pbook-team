@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
-import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
-import BR_TodoWith from './reviewer_page/BR_TodoWith'
-import BR_DateTime from './reviewer_page/BR_DateTime'
-import BR_Navbar from './reviewer_page/BR_Navbar'
+import BR_ReviewerList from '../BR_ReviewerList'
+import BR_TodoWith from '../BR_TodoWith'
+import BR_DateTime from '../BR_DateTime'
+import BR_Navbar from '../BR_Navbar'
 
-import ReviewerBooks from '../pages/ReviewerBooks'
-import Data from '../pages/reviewer_page/data/reviewer_data'
+import ReviewerBooks from '../../ReviewerBooks'
+import Data from '../data/reviewer_data'
 
 // json-server todo
 // import {data} from '../pages/reviewer_page/data/reviewer_books'
@@ -19,16 +19,7 @@ export class Reviewer extends React.Component {
 }
 
 render() {
-    // const brData = Data.map((value) => 
-    // <li key={value.id}>
-    // {value.name}
-    // {value.type}
-    // {value.level}
-    // </li>)
-
-    // const db = Data.map(({name,type,book,level,id}) => <>{name}</>);
-    // return books.filter(({name}) => ('阿德' === name)).map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
-
+    const br_date = Data.map(({name}) => <>{name}</>);
     return (
         <Router>
         <>
@@ -39,9 +30,15 @@ render() {
         <BR_Navbar />
 
         <section className="reviewerList borderLine">
-        {/* <BR_ReviewerList name={brData[3]}/> */}
+        <BR_ReviewerList name={br_date[3]}/>
+
+        {Data.map((value)=>{
+            return (<BR_ReviewerList name={value.name}/>)})}
+
         {Data.map(({level,type,name,book})=>{
         return<BR_ReviewerList level={level} type={type} name={name} book={book}/>})}
+
+
         </section>
 
         <Switch>
@@ -54,4 +51,12 @@ render() {
 }
 export default Reviewer
 
+// <Router>
+// <>
+
+// <section className="reviewerList borderLine">
 // {getBooks()}
+// </section>
+
+// </>
+// </Router>

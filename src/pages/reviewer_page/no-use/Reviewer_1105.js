@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
-import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
-import BR_TodoWith from './reviewer_page/BR_TodoWith'
-import BR_DateTime from './reviewer_page/BR_DateTime'
-import BR_Navbar from './reviewer_page/BR_Navbar'
+import BR_ReviewerList from '../BR_ReviewerList'
+import BR_TodoWith from '../BR_TodoWith'
+import BR_DateTime from '../BR_DateTime'
+import BR_Navbar from '../BR_Navbar'
 
-import ReviewerBooks from '../pages/ReviewerBooks'
-import Data from '../pages/reviewer_page/data/reviewer_data'
+import ReviewerBooks from '../../ReviewerBooks'
+import Data from '../data/reviewer_data'
 
 // json-server todo
 // import {data} from '../pages/reviewer_page/data/reviewer_books'
