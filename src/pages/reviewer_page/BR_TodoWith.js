@@ -12,7 +12,7 @@ class BR_TodoWith extends React.Component {
           <input style={{position:'relative',left:'50%',transform:'translate(-50%,0%)'}} type="text" name="qq" 
           ref={this.inputRef}/>                    
           {/* 觸發函式 */}
-          <button style={{position:'relative',left:'50%',transform:'translate(-168%,0%)'}}
+          <button style={{position:'relative',left:'50%',transform:'translate(-168%,0%)',zIndex:'0'}}
            type="button" onClick={this.addItem}>記事本</button>
 
           <ul>{/* 動態虛擬生成 */}

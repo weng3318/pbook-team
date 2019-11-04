@@ -29,6 +29,7 @@ h5{
     color: #2d3a3a;
     overflow: hidden;
     white-space: nowrap;
+    z-index: 0;
 }
 /* 書評列表 (參照背景)*/
 .reviewerList {
@@ -131,8 +132,7 @@ h5{
 }
 /* 追蹤作者 (按鈕) */
 .brIconFollow{
-    max-width: 80%;;
-    min-width: 90%;;
+    max-width: 75%;;
 }
 /* 分享圖示 (按鈕) */
 .brIconShare{
