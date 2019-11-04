@@ -5,6 +5,14 @@ import ReviewerBooks from '../../pages/ReviewerBooks';
 import '../reviewer_page/BR_Reviewer.css'
 
 export class BR_ReviewerList extends React.Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       
+    }
+  }
+    // axios
   render() {
     return (
 <Router>
