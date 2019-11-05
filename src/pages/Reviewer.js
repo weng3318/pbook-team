@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
+import ReviewerBooks from './ReviewerBooks'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 import BR_TodoWith from './reviewer_page/BR_TodoWith'
 import BR_DateTime from './reviewer_page/BR_DateTime'
 import BR_Navbar from './reviewer_page/BR_Navbar'
 
-import ReviewerBooks from '../pages/ReviewerBooks'
 import Data from '../pages/reviewer_page/data/reviewer_data'
 
 // json-server todo
@@ -18,40 +18,41 @@ export class Reviewer extends React.Component {
     this.state = {}
 }
 
-render() {
-    // const brData = Data.map((value) => 
-    // <li key={value.id}>
-    // {value.name}
-    // {value.type}
-    // {value.level}
-    // </li>)
-
-    // const db = Data.map(({name,type,book,level,id}) => <>{name}</>);
-    // return books.filter(({name}) => ('阿德' === name)).map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
-
+render() {    
+    
     return (
         <Router>
         <>
-        
         <h1>書評家</h1>
         <BR_DateTime />
+        <button onClick={()=>this.props.history.push('/Reviewer')}>回到首頁</button>
         <BR_TodoWith />
         <BR_Navbar />
 
+        <Link to="/ReviewerBooks/">看看書櫃</Link>
+
         <section className="reviewerList borderLine">
-        {/* <BR_ReviewerList name={brData[3]}/> */}
-        {Data.map(({level,type,name,book})=>{
-        return<BR_ReviewerList level={level} type={type} name={name} book={book}/>})}
+        {Data.map(({level,type,name,book,id})=>{
+        return (<BR_ReviewerList key={id} to={'/ReviewerBooks/'+id} id={id} name={name} type={type} level={level} book={book}></BR_ReviewerList>)
+        })}
         </section>
 
         <Switch>
-        <Route  exact path="/reviewerBooks/:id?" component={()=><BR_ReviewerList/>}/>  
+        <Router exact path="/ReviewerBooks" component={ReviewerBooks} />
+        <Router exact path="/" component={Reviewer} />
+        <Route  exact path="/reviewerBooks/:id?" component={ReviewerBooks}/>
         </Switch>
       </>
         </Router>
     )
-  }
+}
 }
 export default Reviewer
 
-// {getBooks()}
+
+
+
+        {/* {Data.filter(({name})=>("YO桑" === name))
+        .map(({name,type,level,book})=>{
+        return <BR_ReviewerList name={name} type={type} level={level} book={book}/>})} */}
+        

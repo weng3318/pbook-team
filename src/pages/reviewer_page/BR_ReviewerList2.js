@@ -3,11 +3,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import ReviewerBooks from '../ReviewerBooks';
 
 import '../reviewer_page/BR_Reviewer.css'
-import Data from '../reviewer_page/data/reviewer_data'
 
 class BR_ReviewerList extends React.Component {
   render(props) {
-    console.log(Data)
     return (
 <Router>
       <>   
@@ -71,9 +69,7 @@ class BR_ReviewerList extends React.Component {
         <iframe className="brYouTubeRWD borderLine" width="50%" height="auto" src="https://www.youtube.com/embed/uVIpHQMzvR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
         <div style={{height:'30px'}}></div>
-        <Switch>
-        <Route  exact path="/reviewerBooks/:id?" component={ReviewerBooks}/>
-        </Switch>
+
       </>
         </Router>
     )

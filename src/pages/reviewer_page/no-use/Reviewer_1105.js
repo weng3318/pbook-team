@@ -19,15 +19,15 @@ export class Reviewer extends React.Component {
 }
 
 render() {
-    // const brData = Data.map((value) => 
-    // <li key={value.id}>
-    // {value.name}
-    // {value.type}
-    // {value.level}
-    // </li>)
+    const brData = Data.map((value) => 
+    <li key={value.id}>
+    {value.name}
+    {value.type}
+    {value.level}
+    </li>)
 
-    // const db = Data.map(({name,type,book,level,id}) => <>{name}</>);
-    // return books.filter(({name}) => ('阿德' === name)).map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
+    const db = Data.map(({name,type,book,level,id}) => <>{name}</>);
+    return books.filter(({name}) => ('阿德' === name)).map(({level,type,name,book})=> <BR_ReviewerList level={level} type={type} name={name} book={book} />)
 
     return (
         <Router>
