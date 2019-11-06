@@ -13,11 +13,6 @@ import Data from '../pages/reviewer_page/data/reviewer_data'
 // import {data} from '../pages/reviewer_page/data/reviewer_books'
 
 export class Reviewer extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-}
-
 render() {    
     
     return (
@@ -49,10 +44,10 @@ render() {
 }
 export default Reviewer
 
+{/* {Data.filter(({name})=>("YO桑" === name))
+.map(({name,type,level,book})=>{
+return <BR_ReviewerList name={name} type={type} level={level} book={book}/>})} */}
 
 
 
-        {/* {Data.filter(({name})=>("YO桑" === name))
-        .map(({name,type,level,book})=>{
-        return <BR_ReviewerList name={name} type={type} level={level} book={book}/>})} */}
         
