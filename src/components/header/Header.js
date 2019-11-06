@@ -16,11 +16,13 @@ import Logout from '../../pages/Logout'
 import Cart from '../../pages/Cart'
 import NoPage from '../../pages/nopage/NoPage'
 
-// ------------------------------------------------------
+// -----------------------------------------------------
 import ReviewerBooks from '../../pages/ReviewerBooks'
-// ------------------------------------------------------
-import './header.css'
+import BR_ReviewerList from '../../pages/reviewer_page/BR_ReviewerList'
+import BR_Navbar from '../../pages/reviewer_page/BR_Navbar'
+// -----------------------------------------------------
 
+import './header.css'
 
 export default class Header extends React.Component {
     constructor() {
@@ -140,6 +142,9 @@ export default class Header extends React.Component {
                 <img src={require('./images/header.jpg')} className="img-fluid header-img" alt="" />
                 
                 <Router>
+                    {/* -------------------------------------------- */}
+                    <BR_Navbar />
+                    {/* -------------------------------------------- */}
                     <Link to="/" className="logo position-absolute pointer"></Link>
 
                     <div className="mwt_border"></div>
@@ -162,13 +167,6 @@ export default class Header extends React.Component {
 
 
                     <section className="d-flex justify-content-center titleButton">
-                    {/* ------------------------------------------------------------ */}
-                        <Link to="/reviewerBooks" className="text-center pointer">
-                            <span className="titleZh">看看書櫃</span>
-                            <br />
-                            <span className="titleEn">REVIEWERBOOKS</span>
-                        </Link>
-                    {/* ------------------------------------------------------------ */}
                         <Link to="/reviewer" className="text-center mx-4 pointer">
                             <span className="titleZh">書評家</span>
                             <br />
@@ -203,10 +201,10 @@ export default class Header extends React.Component {
                             <div className="bar bar3"></div>
                             <ul>
                             
-                                {/* display表示要不要顯示 */}
+                                {/* display顯示會員 */}
                                 <li style={{ display: 'Arwen' }}><Link to="/reviewer" className="a">阿文</Link></li>
                                 <li style={{ display: phoneVisitorStatus }}><Link to="/login" className="a">登入</Link></li>
-                                {/* this.state.name 會顯示登入id */}
+                                {/* this.state.name 顯示登入id */}
                                 <li style={{ display: phoneMemberStatus }}><Link to="/member" className="a">{this.state.name}</Link></li>
                                 <li style={{ display: phoneMemberStatus }}><Link to="/game" className="a">二手書配對</Link></li>
                                 <li><Link to="/cart" className="a">購物車</Link></li>
@@ -221,11 +219,12 @@ export default class Header extends React.Component {
                     </section>
 
                     <Switch>
-                    {/* ------------------------------------------------------------ */}
-                        <Route exact path="/reviewerBooks" component={ReviewerBooks} />
-                    {/* ------------------------------------------------------------ */}
                         <Route exact path="/" component={Home} />
+                        {/* --------------------------------------------------- */}
                         <Route exact path="/reviewer" component={Reviewer} />
+                        <Route exact path="/BR_ReviewerList" component={BR_ReviewerList}/>
+                        <Route path="/ReviewerBooks/:id?" component={ReviewerBooks}/>
+                        {/* --------------------------------------------------- */}
                         <Route exact path="/books" component={Books} />
                         <Route exact path="/activities" component={Activities} />
                         <Route exact path="/reviews" component={Reviews} />

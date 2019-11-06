@@ -7,11 +7,9 @@ import Data from '../reviewer_page/data/reviewer_data'
 
 class BR_ReviewerList extends React.Component {
   render(props) {
-    console.log(Data)
     return (
-<Router>
       <>   
-<section className="ReviewerListAllBox">
+<section className="ReviewerListAllBox reviewerList">
     <div className="d-flex">
 
 
@@ -24,7 +22,7 @@ class BR_ReviewerList extends React.Component {
               <div className="brIconBox">
                   <div className="AvatarInfo">{this.props.type}</div>
               </div>
-              
+
               <Link to={"/reviewerBooks/"+this.props.id} className="d-flex justify-content-center borderLineTop">
               <div className="brIconBox">
                 <img src={require('../reviewer_page/images/P_logo.png')}/>
@@ -68,14 +66,15 @@ class BR_ReviewerList extends React.Component {
                 </div>
           </div>
     </div>
-        <iframe className="brYouTubeRWD borderLine" width="50%" height="auto" src="https://www.youtube.com/embed/uVIpHQMzvR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {/* <iframe className="brYouTubeRWD borderLine"
+            width="50%" height="auto"
+            src={this.props.tube}
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullscreen /> */}
+        <iframe className="brYouTubeRWD borderLine" width="50%" height="auto" src={this.props.tube} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
         <div style={{height:'30px'}}></div>
-        <Switch>
-        <Route  exact path="/reviewerBooks/:id?" component={ReviewerBooks}/>
-        </Switch>
       </>
-        </Router>
     )
   }
 }

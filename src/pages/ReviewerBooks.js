@@ -1,14 +1,11 @@
 import React from 'react'
-import BR_ReviewerList2 from './reviewer_page/BR_ReviewerList2'
-import BR_TodoWith from './reviewer_page/BR_TodoWith'
-import BR_DateTime from './reviewer_page/BR_DateTime'
-import BR_Navbar from './reviewer_page/BR_Navbar'
-
 import '../pages/reviewer_page/BR_Reviewer.css'
 import Data from '../pages/reviewer_page/data/reviewer_data'
+import {withRouter} from 'react-router-dom'
+import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 
 class ReviewerBooks extends React.Component {
-      render(props) {
+      render() {
 
     let reviewerData = null
 
@@ -18,26 +15,24 @@ class ReviewerBooks extends React.Component {
       }
     }
 
-    // if(!reviewerData){
-    //     return
-    //     <>
-    //     找不到資料<br/>
-    //     <button onClick={()=>this.props.history.push('/')}>回到首頁</button>
-    //     </>
-    // }
-console.log()
+    if(!reviewerData){
+        return(
+        <>
+        <h1>找不到資料<br/></h1>
+        <button onClick={()=>this.props.history.push('/reviewer')}>回到首頁</button>
+        </>
+        )}
+
     return (
         <>
         <h1>看看書櫃</h1>
-        {/* <BR_DateTime />
-        <BR_TodoWith />
-        <BR_Navbar /> */}
+        {/* <h4><button onClick={()=> this.props.history.push('/Reviewer')}>回到首頁</button></h4> */}
         <section className="reviewerBooks borderLine">
-        <BR_ReviewerList2 id={reviewerData.id} name={reviewerData.name} type={reviewerData.type} level={reviewerData.level} book={reviewerData.book}/>
+        <BR_ReviewerList key={reviewerData.id} id={reviewerData.id} name={reviewerData.name} type={reviewerData.type} level={reviewerData.level} info={reviewerData.info} tube={reviewerData.tube}></BR_ReviewerList>
         </section>
         </>
     )
   }
 }
 
-export default ReviewerBooks
+export default withRouter(ReviewerBooks)

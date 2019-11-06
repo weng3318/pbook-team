@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import {withRouter} from 'react-router-dom'
 
 class BR_TodoWith extends React.Component {
     constructor(props) { // 在建構函式設定state的初始值
@@ -6,9 +7,10 @@ class BR_TodoWith extends React.Component {
       this.state = { arr:[]};
       this.inputRef = React.createRef(); // 在建構函式創建refs屬性
     }
-    render() {
+    render(props) {
       return (　
         <>                                 {/* ref抓取 */}
+        {/* <button onClick={()=> this.props.history.push('/Reviewer')}>回到首頁</button> */}
           <input style={{position:'relative',left:'50%',transform:'translate(-50%,0%)'}} type="text" name="qq" 
           ref={this.inputRef}/>                    
           {/* 觸發函式 */}
@@ -45,4 +47,4 @@ class BR_TodoWith extends React.Component {
 
   }
 
-export default BR_TodoWith
+export default withRouter(BR_TodoWith)

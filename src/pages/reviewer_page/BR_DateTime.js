@@ -7,28 +7,27 @@ export class BR_DateTime extends Component {
       currentTime: new Date().toLocaleTimeString(),
     }
   }
-  
-  // componentDidMount() {
-  //   this.del = setInterval(this.updateTime, 1000)
-  // }
-  // //計時器
-  // updateTime = () => {
-  //   this.setState({
-  //     currentTime: new Date().toLocaleTimeString(),
-  //   })
-  // }
-  // componentWillUnmount() {
-  //   clearInterval(this.del)
-  // }
-  
- 
+
+  componentDidMount() {
+    this.del = setInterval(this.updateTime, 1000)
+  }
+  //計時器
+  updateTime = () => {
+    this.setState({
+      currentTime: new Date().toLocaleTimeString(),
+    })
+  }
+  componentWillUnmount() {
+    clearInterval(this.del)
+  }
+
   render() {
     setInterval(() => {
       this.setState({
-        currentTime: new Date().toLocaleTimeString()
+        currentTime: new Date().toLocaleTimeString(),
       })
-    }, 1000);
-    
+    }, 1000)
+
     return (
       <>
         <div style={{ textAlign: 'center' }}>

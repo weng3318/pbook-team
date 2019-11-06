@@ -21,21 +21,23 @@ h5{
     border-top:3px solid #2d3a3a;
 }
 /* 麵包屑(Breadcrumbs) */
-.navbar{
+.brNavbar{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 40px;
+    margin: 0 0 10px 0;
+    padding: 6px;
     background: #cde2d0;
-    line-height: 0;
     color: #2d3a3a;
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
     z-index: 0;
 }
 /* 書評列表 (參照背景)*/
 .reviewerList {
     background: #fff;
     max-width: 1200px;
-    min-height: 2050px;
+    /* min-height: 2050px; */
     margin: 0 auto;
     /* background: url(../reviewer_page/images/01_書評家.png) center center; */
     background-size:cover;

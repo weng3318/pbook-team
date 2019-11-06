@@ -25,7 +25,7 @@ const NoPage = (props) => {
 
                     <div id="app"></div>
                 </div>
-                <button onClick={() => props.history.push('/')}>回首頁</button>
+                <button onClick={() => props.history.push('/reviewer')}>回首頁</button>
             </div>
         </>
     )
