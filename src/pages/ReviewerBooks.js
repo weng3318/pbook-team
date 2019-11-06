@@ -3,6 +3,7 @@ import '../pages/reviewer_page/BR_Reviewer.css'
 import Data from '../pages/reviewer_page/data/reviewer_data'
 import {withRouter} from 'react-router-dom'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
+import BR_Bookcase from './reviewer_page/BR_Bookcase'
 
 class ReviewerBooks extends React.Component {
       render() {
@@ -26,9 +27,9 @@ class ReviewerBooks extends React.Component {
     return (
         <>
         <h1>看看書櫃</h1>
-        {/* <h4><button onClick={()=> this.props.history.push('/Reviewer')}>回到首頁</button></h4> */}
         <section className="reviewerBooks borderLine">
         <BR_ReviewerList key={reviewerData.id} id={reviewerData.id} name={reviewerData.name} type={reviewerData.type} level={reviewerData.level} info={reviewerData.info} tube={reviewerData.tube}></BR_ReviewerList>
+        <BR_Bookcase />
         </section>
         </>
     )
