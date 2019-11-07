@@ -1,12 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import ReviewerBooks from '../ReviewerBooks';
-
-import '../reviewer_page/BR_Reviewer.css'
-import Data from '../reviewer_page/data/reviewer_data'
 
 class BR_ReviewerList extends React.Component {
-  render(props) {
+  render() {
     return (
       <>   
 <section className="ReviewerListAllBox reviewerList">

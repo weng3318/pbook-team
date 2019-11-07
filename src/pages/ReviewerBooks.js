@@ -1,9 +1,8 @@
 import React from 'react'
-import '../pages/reviewer_page/BR_Reviewer.css'
 import Data from '../pages/reviewer_page/data/reviewer_data'
 import {withRouter} from 'react-router-dom'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
-import BR_Bookcase from './reviewer_page/BR_Bookcase'
+import BR_Bookcase from './reviewer_page/BR_BookcaseList'
 
 class ReviewerBooks extends React.Component {
       render() {
