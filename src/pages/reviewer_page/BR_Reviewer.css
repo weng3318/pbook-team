@@ -61,7 +61,7 @@ h5{
     max-width: 1200px;
     min-height: 2050px;
     margin: 0 auto;
-    background: url(../reviewer_page/images/02_看看書櫃.png) center center;
+    /* background: url(../reviewer_page/images/02_看看書櫃.png) center center; */
     background-size:cover;
 }
 /* 分頁，看看書櫃 (參照偽元素) */

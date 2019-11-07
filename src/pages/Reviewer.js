@@ -3,7 +3,7 @@ import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 import Data from '../pages/reviewer_page/data/reviewer_data'
 
 // 書評家，使用的CSS
-import '../pages/reviewer_page/BR_Edit_Books.css'
+import '../pages/reviewer_page/BR_Bookcase.css'
 import '../pages/reviewer_page/BR_Reviewer.css'
 
 // json-server todo
