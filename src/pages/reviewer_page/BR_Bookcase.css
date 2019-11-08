@@ -53,7 +53,7 @@
 /* 書評家簡介，(文字、限制行數) */
 .brInfoText_Bookcase{
     font-size: 1rem;
-    margin: 6px;
+    margin: 6px 20px 12px 20px;
     /* color: rgba(255,255,255,.7); */
     color: #2d3a3a;
     overflow : hidden;
@@ -77,7 +77,7 @@
 }
 /* 社群分享，三小圖示+收藏 (社群圖示) */
 .brIconShare_Bookcase{
-    max-width: 7%;
+    width: 30px;
     margin: 0 6px 6px 6px;
 }
 /* 評分組件區塊，區域控制 */

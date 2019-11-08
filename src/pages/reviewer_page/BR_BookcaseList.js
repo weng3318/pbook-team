@@ -12,7 +12,7 @@ class BR_Bookcase extends React.Component {
           </div>
 
           <div className="brInfoBox_Bookcase borderLine"><h5>書評內容</h5>
-                <div className="brInfoText_Bookcase borderLine">
+                <div className="brInfoText_Bookcase">
                     {this.props.bookName}<div className="bookInfo_Bookcase">書名：蔡康永的說話之道</div>
                     {this.props.bookBy}<div className="bookInfo_Bookcase">作者：蔡康永</div>
                     <br/>
