@@ -34,18 +34,18 @@ export class Reviewer_axios_Arwen extends React.Component {
       })
 
     // 可選，上方請求指令
-    axios
-      .get('/reviewer_Data/', {
-        params: {
-          id: 3,
-        },
-      })
-      .then(function(res) {
-        console.log('資料連線成功' + res)
-      })
-      .catch(function(error) {
-        console.log('404！資料連線失敗' + error)
-      })
+    // axios
+    //   .get('/reviewer_Data/', {
+    //     params: {
+    //       id: 3,
+    //     },
+    //   })
+    //   .then(function(res) {
+    //     console.log('資料連線成功' + res)
+    //   })
+    //   .catch(function(error) {
+    //     console.log('404！資料連線失敗' + error)
+    //   })
   }
 
   render() {

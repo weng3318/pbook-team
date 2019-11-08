@@ -24,7 +24,7 @@ function Reviewer() {
   return (
     <>
       {books.map(data => (
-        <h4>{data.level} {data.name}</h4>
+        <h4>{data.level}{data.name}</h4>
       ))}
       {/* <BR_ReviewerList /> */}
     </>
