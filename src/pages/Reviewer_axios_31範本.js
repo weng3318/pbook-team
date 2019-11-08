@@ -4,14 +4,12 @@ import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 
 function Reviewer() {
   const [books, setBooks] = useState([])
-  
   useEffect(() => {
     ReviewerData()
-  },[])
-
+  })
   const ReviewerData = () => {
     axios
-      .get('http://localhost:5555/reviewer_Data')
+      .get('http://localhost:5555/books')
       .then(res => {
         setBooks(res.data)
         console.log(res.data)
@@ -24,9 +22,9 @@ function Reviewer() {
   return (
     <>
       {books.map(data => (
-        <h4>{data.level} {data.name}</h4>
+        <h4>{data.level}</h4>
       ))}
-      {/* <BR_ReviewerList /> */}
+      <BR_ReviewerList />
     </>
   )
 }
