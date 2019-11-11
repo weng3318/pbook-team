@@ -75,7 +75,7 @@ class ReviewerBooks extends React.Component {
 
         {/* 接應id的書評家個人書櫃 */}
         <BR_Bookcase key={reviewerData.id} 
-        id={reviewerData.id} bookcase={bookcase}
+        id={reviewerData.id} 
         >
         </BR_Bookcase>
 
