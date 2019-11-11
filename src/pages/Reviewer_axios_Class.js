@@ -2,7 +2,7 @@ import axios from 'axios'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 import React from 'react'
 
-export class Reviewer_axios_Arwen extends React.Component {
+export class Reviewer_axios_Class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -44,14 +44,14 @@ export class Reviewer_axios_Arwen extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         {this.state.brDada.map((data) => (
           <h1>{data.name}</h1>
         ))}
         {/* <img src={require('./reviewer_page/BR_images/03書_React全方位基礎入門實戰.png')} */}
-      </div>
+      </>
     )
   }
 }
 
-export default Reviewer_axios_Arwen
+export default Reviewer_axios_Class

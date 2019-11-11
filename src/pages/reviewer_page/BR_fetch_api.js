@@ -13,7 +13,7 @@ class BR_fetch_api extends React.Component {
   }
 
   requestToServer = (url, method, data = {}) => {
-    // GET方法不有body，先設定出樣版物件
+    // GET方法沒有body，先設定出樣版物件
     const requestTemplate = new Request(url, {
       method: method,
       headers: new Headers({
@@ -30,7 +30,7 @@ class BR_fetch_api extends React.Component {
 
     fetch(req)
       .then(response => {
-        // 直接轉換JSON格式為物件、字串、數字…
+        // 轉換JSON格式為物件、字串、數字…
         return response.json()
       })
       .then(jsonObject => {

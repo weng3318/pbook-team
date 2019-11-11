@@ -1,6 +1,0 @@
-{
-  "reviewer_Data": [
-    { "id":1, "level": "★ 書評家 ★", "type": "小說家、導演、總編輯", "name": "阿文", "info": "哈利波特", "tube":"https://www.youtube.com/embed/uVIpHQMzvR8"},
-    { "id":2, "level": "★ 書評家 ★", "type": "小說家、編劇、工程師", "name": "31桑", "info": "為美好的世界獻上祝福", "tube":"https://www.youtube.com/embed/LgY-mRoP67w"}
-  ]
-}

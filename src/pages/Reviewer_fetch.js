@@ -15,7 +15,7 @@ class Reviewer extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://httpbin.org/get")
+    fetch("http://localhost:5555/reviewer_Data")
       .then(res => res.json())
       .then((result) => {
           this.setState({
