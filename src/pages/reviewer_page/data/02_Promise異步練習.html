@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      Promise.resolve()
+
+        .then(() => {
+          throw new Error('幹')
+        })
+        
+        //如果函数抛出错误或返回一个拒绝的Promise，
+        //则 then 将返回一个拒绝的Promise。
+        .catch(error => {
+          console.log(error.message)
+        })
+        
+    </script>
+  </body>
+</html>

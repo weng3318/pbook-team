@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            var promise = new Promise((resolve,reject)=>{
+              if(value){
+                resolve(value)
+              }else{
+                reject(error)
+                console.log('OK')
+              }
+            })
+      promise.then( function ( value ) {
+        // 如果調用了resolve方法，執行此函數
+      }, function ( value ) {
+        // 如果調用了reject方法，執行此函數
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div value="123"></div>
+    <script>
+      getData = () => {
+      
+          let req = new XMLHttpRequest()
+          req.open('get', 'http://localhost:5555/reviewer_Data')
+          req.onload = function () {
+            alert(this.responseText)
+          }
+          req.send()
+      }  
+      alert(getData())
+      
+    </script>
+  </body>
+</html>

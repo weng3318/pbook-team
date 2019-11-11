@@ -8,5 +8,6 @@ const Data = [
   { id:'7', level: '★ 書評家 ★', type: '小說家、編劇、美術老師', name: 'Amy', info: '迷妹', tube:'https://www.youtube.com/embed/Nd_MFj0KXFY'},
   { id:'8', level: '★ 書評家 ★', type: '小說家、編劇、大學生', name: '阿克婭', info: '藍色智障', tube:'https://www.youtube.com/embed/EWGAIq9uGX4'},
   { id:'9', level: '★ 書評家 ★', type: '小說家、編劇、高中生', name: '惠惠', info: '蘿莉', tube:'https://www.youtube.com/embed/_q2ABESnqi0'},
+  { id:'10', level: '★ 書評家 ★', type: '小說家、編劇、巨乳', name: '達克尼斯', info: '為美好的世界獻上祝福２', tube:'https://www.youtube.com/embed/SFcwSge9Q8A'},
   ]
   export default Data

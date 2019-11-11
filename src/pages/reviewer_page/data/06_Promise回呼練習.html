@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div value="123"></div>
+    <script>
+      getData = () => {
+        return new Promise(function(resolve,reject){
+          let req = new XMLHttpRequest()
+          req.open('get', 'http://localhost:5555/reviewer_Data')
+          req.onload = function () {
+            resolve(this.responseText)
+          }
+          req.onerror=()=>{
+            reject('error')
+          }
+          req.send()
+        })
+      }
+      
+      getData().then(function(result){
+        alert(result)
+      })
+
+      let dataPromise = getData();
+      
+      dataPromise.then(function(result) {
+        console.log('OK!'+result)
+      }),function(error){
+        console.log('NO!'+error)
+      }
+    </script>
+  </body>
+</html>

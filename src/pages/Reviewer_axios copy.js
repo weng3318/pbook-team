@@ -3,31 +3,25 @@ import axios from 'axios'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 
 function Reviewer() {
-
   const [brData, setData] = useState([])
-
   useEffect(() => {
-    ReviewerData()
-  },[])
+    reviewerData()
+  }, [])
 
-  const ReviewerData = () => {
+  const reviewerData = () => {
     axios
-      .get('http://localhost:5555/reviewer_Data')
+      .get('get', 'http://localhost:5555/reviewer_Data')
       .then(res => {
         setData(res.data)
-        // console.log(res.data)
       })
-      .catch(error => {
-        // console.log(error)
-      })
+      .catch(error => {})
   }
-  
+
   return (
     <>
       {brData.map(data => (
-        <h4>{data.level}{data.name}</h4>
+        <h5>{data.name}</h5>
       ))}
-      {/* <BR_ReviewerList /> */}
     </>
   )
 }

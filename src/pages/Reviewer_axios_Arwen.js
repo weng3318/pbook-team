@@ -6,7 +6,7 @@ export class Reviewer_axios_Arwen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      brDada: [],
+      brDada: []
     }
   }
 
@@ -21,42 +21,34 @@ export class Reviewer_axios_Arwen extends React.Component {
   // }
 
   componentDidMount() {
-    axios
-      .get('http://localhost:5555/reviewer_Data?id=3')
-      .then(res => {
-        this.setState({
-          brDada: res.data,
-        })
-        console.log(res.data)
+    axios.get('http://localhost:5555/reviewer_Data').then(res => {
+        this.setState({brDada: res.data})
+        console.log('第一次取資料'+res.data)
       })
       .catch(function(error) {
-        console.log(error)
+        console.log('取資料失敗'+error)
       })
 
-    // 可選，上方請求指令
-    // axios
-    //   .get('/reviewer_Data/', {
-    //     params: {
-    //       id: 3,
-    //     },
-    //   })
-    //   .then(function(res) {
-    //     console.log('資料連線成功' + res)
-    //   })
-    //   .catch(function(error) {
-    //     console.log('404！資料連線失敗' + error)
-    //   })
+    axios.get('/reviewer_Data/', {
+        params: {
+          id: 3,
+        },
+      })
+      .then(function(res) {
+        console.log('資料連線成功' + res)
+      })
+      .catch(function(error) {
+        console.log('404！資料連線失敗' + error)
+      })
   }
 
   render() {
     return (
       <div>
-        {this.state.brDada.map(data => (
+        {this.state.brDada.map((data) => (
           <h1>{data.name}</h1>
         ))}
-        <img
-          src={require('./reviewer_page/BR_images/03書_React全方位基礎入門實戰.png')}
-        />
+        {/* <img src={require('./reviewer_page/BR_images/03書_React全方位基礎入門實戰.png')} */}
       </div>
     )
   }

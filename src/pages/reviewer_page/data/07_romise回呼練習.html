@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div value="123"></div>
+    <script>
+      getData = () => {
+           return new Promise(function(resolve,reject){
+          let req = new XMLHttpRequest()
+          req.open('get', 'http://ocalhost:5555/reviewer_Data')
+          req.onload = function () {
+            resolve(this.responseText)
+          }
+          req.onerror = function(){
+            reject('程式出錯了!')
+          }
+          req.send()
+        })
+      } 
+      let DataPromise = getData()
+      DataPromise.then(function(q){
+        alert(q)
+      }).catch(function(error){
+        alert(error)
+      })
+      
+      // let DataPromise = getData()
+      // DataPromise.then(function(q){
+      //   alert(q)
+      // },function(error){
+      //   alert(error)
+      // })
+      
+    </script>
+  </body>
+</html>
