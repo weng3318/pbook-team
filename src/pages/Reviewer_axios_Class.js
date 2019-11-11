@@ -6,7 +6,7 @@ export class Reviewer_axios_Class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      brDada: []
+      brData: []
     }
   }
 
@@ -15,14 +15,14 @@ export class Reviewer_axios_Class extends React.Component {
   //     response => response.json()
   //   )
   //   this.setState({
-  //     brDada: response.dataCase
+  //     brData: response.dataCase
   //   })
   //   console.log('資料連線測試' + response.dataCase)
   // }
 
   componentDidMount() {
     axios.get('http://localhost:5555/reviewer_Data').then(res => {
-        this.setState({brDada: res.data})
+        this.setState({brData: res.data})
         console.log('第一次取資料'+res.data)
       })
       .catch(function(error) {
@@ -45,7 +45,7 @@ export class Reviewer_axios_Class extends React.Component {
   render() {
     return (
       <>
-        {this.state.brDada.map((data) => (
+        {this.state.brData.map((data) => (
           <h1>{data.name}</h1>
         ))}
         {/* <img src={require('./reviewer_page/BR_images/03書_React全方位基礎入門實戰.png')} */}
