@@ -79,7 +79,7 @@ class ReviewerBooks extends React.Component {
         >
         </BR_Bookcase>
 
-        {/* {this.state.brData.map(({ id, bookcase })=>(
+        {/* {this.state.brData.map(({ bookcase })=>(
           <BR_Bookcase key={id}
           id={id}
         bookcase={bookcase}
