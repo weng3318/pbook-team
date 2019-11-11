@@ -9,7 +9,7 @@ class BR_Bookcase extends React.Component {
     <div className="d-flex">
           <div className="brAvatarAllBox_Bookcase borderLine">
             {/* 書籍圖片 */}
-              <img className="brBookInfoImg_Bookcase" src={require('../reviewer_page/BR_images/'+bookcase)}/>
+              <img className="brBookInfoImg_Bookcase" src={require('../reviewer_page/images_books/'+bookcase)}/>
           </div>
 
           <div className="brInfoBox_Bookcase borderLine"><h5>書評內容</h5>

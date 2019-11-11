@@ -48,7 +48,7 @@ export class Reviewer_axios_Class extends React.Component {
         {this.state.brData.map((data) => (
           <h1>{data.name}</h1>
         ))}
-        {/* <img src={require('./reviewer_page/BR_images/03書_React全方位基礎入門實戰.png')} */}
+        {/* <img src={require('./reviewer_page/images_books/03書_React全方位基礎入門實戰.png')} */}
       </>
     )
   }

@@ -19,7 +19,7 @@
       "type": "小說家、編劇、工程師",
       "name": "31桑",
       "info": "為美好的世界獻上祝福",
-      "tube": "https://www.youtube.com/embed/LgY-mRoP67w",
+      "tube": "https://www.youtube.com/embed/h3uUw-s-T5Q",
       "bookcase": [
         "03書_React全方位基礎入門實戰.png",
         "vb_9789864762859.jpg",
@@ -42,7 +42,7 @@
       "type": "小說家、編劇、董事長",
       "name": "享享",
       "info": "大賢者",
-      "tube": "https://www.youtube.com/embed/h3uUw-s-T5Q",
+      "tube": "https://www.youtube.com/embed/LgY-mRoP67w",
       "bookcase": "vb_9789864762859.jpg"
     },
     {
@@ -93,20 +93,11 @@
     {
       "id": 10,
       "level": "★ 書評家 ★",
-      "type": "小說家、編劇、動漫廚",
-      "name": "達克尼斯",
-      "info": "為美好的世界獻上祝福２",
-      "tube": "https://www.youtube.com/embed/SFcwSge9Q8A",
-      "bookcase": "vb_4715443044431.jpg"
-    },
-    {
-      "id": 11,
-      "level": "★ 書評家 ★",
       "type": "小說家、編劇、抖M",
       "name": "達克尼斯",
-      "info": "為美好的世界獻上祝福(劇場版)",
-      "tube": "https://www.youtube.com/embed/SFcwSge9Q8A",
-      "bookcase": "vb_9573318318.jpg"
+      "info": "為美好的世界獻上祝福２",
+      "tube": "https://www.youtube.com/embed/O058aSaoa0k",
+      "bookcase": "vb_4715443044431.jpg"
     }
   ]
 }

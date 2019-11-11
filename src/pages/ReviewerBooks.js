@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from '../pages/reviewer_page/data/reviewer_data'
+import Data from './reviewer_page/data/reviewer_data'
 import {withRouter} from 'react-router-dom'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
 import BR_Bookcase from './reviewer_page/BR_BookcaseList'
@@ -34,7 +34,7 @@ class ReviewerBooks extends React.Component {
         console.log('資料連線成功' + res)
       })
       .catch(function(error) {
-        console.log('404！資料連線失敗' + error)
+        console.log('沒有取得資料請執行 json-server --watch --port 5555 reviewer_Data.json ' + error)
       })
     }
       render() {

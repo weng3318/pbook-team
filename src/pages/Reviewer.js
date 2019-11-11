@@ -37,7 +37,7 @@ export class Reviewer extends React.Component {
         console.log('資料連線成功' + res)
       })
       .catch(function(error) {
-        console.log('404！資料連線失敗' + error)
+        console.log('沒有取得資料請執行 json-server --watch --port 5555 reviewer_Data.json ' + error)
       })
   }
   render() {
@@ -49,7 +49,7 @@ export class Reviewer extends React.Component {
       <>
         <h1>書評家</h1>
 
-        <img src={require('./reviewer_page/BR_images/03書_React全方位基礎入門實戰.png')}/>
+        {/* <img src={require('./reviewer_page/images_books/03書_React全方位基礎入門實戰.png')}/> */}
 
         {this.state.brData.filter(({name})=>("31桑" == name))
         .map(({ level, type, name, info, id, tube }) => (
