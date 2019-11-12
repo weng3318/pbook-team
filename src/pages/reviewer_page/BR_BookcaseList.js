@@ -1,15 +1,15 @@
 import React from 'react'
 
-class BR_Bookcase extends React.Component {
+class BR_BookcaseList extends React.Component {
     render() {
-        let bookcase = '03書_React全方位基礎入門實戰.png'
         return (
             <>
 <section className="ReviewerListAllBox_Bookcase reviewerList">
     <div className="d-flex">
           <div className="brAvatarAllBox_Bookcase borderLine">
             {/* 書籍圖片 */}
-              <img className="brBookInfoImg_Bookcase" src={require('../reviewer_page/images_books/'+bookcase)}/>
+              {/* <img className="brBookInfoImg_Bookcase" src={require(`../reviewer_page/images_books/03書_React全方位基礎入門實戰.png`)}/> */}
+              <img className="brBookInfoImg_Bookcase" src={require(`../reviewer_page/images_books/${this.props.bookcase}`)}/>
           </div>
 
           <div className="brInfoBox_Bookcase borderLine"><h5>書評內容</h5>
@@ -42,9 +42,11 @@ class BR_Bookcase extends React.Component {
             {/* 評分組件 */}
     {/* <div className="brStarBox_Bookcase borderLine"></div> */}
 </section>
+        <div style={{height:'30px'}}></div>
+        <h1>測試書本：{this.props.bookcase}</h1>
        </>
         )
     }
 }
 
-export default BR_Bookcase
+export default BR_BookcaseList

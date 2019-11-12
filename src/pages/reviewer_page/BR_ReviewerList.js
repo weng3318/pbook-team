@@ -1,13 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-
+import BR_BookcaseList from './BR_BookcaseList';
 class BR_ReviewerList extends React.Component {
   render() {
     return (
       <>   
 <section className="ReviewerListAllBox reviewerList">
     <div className="d-flex">
-
 
           <div className="brAvatarAllBox borderLine">
               <h5>{this.props.level}</h5>

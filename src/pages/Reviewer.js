@@ -21,7 +21,7 @@ export class Reviewer extends React.Component {
       .get('http://localhost:5555/reviewer_Data')
       .then(res => {
         this.setState({ brData: res.data })
-        console.log('第一次取資料' + res.data)
+        console.log('取資料' + res.data)
       })
       .catch(function(error) {
         console.log('取資料失敗' + error)
@@ -51,12 +51,12 @@ export class Reviewer extends React.Component {
 
         {/* <img src={require('./reviewer_page/images_books/03書_React全方位基礎入門實戰.png')}/> */}
 
-        {this.state.brData.filter(({name})=>("31桑" == name))
-        .map(({ level, type, name, info, id, tube }) => (
+        {this.state.brData.filter(({name})=>("阿德" == name))
+        .map(({ level, type, name, info, id, tube, bookcase }) => (
           <BR_ReviewerList key={id}
           to={'/ReviewerBooks/' + id}
           name={name} type={type} level={level}
-          tube={tube} id={id} info={info}
+          tube={tube} id={id} info={info} bookcase={bookcase}
           ></BR_ReviewerList>
         ))}
               

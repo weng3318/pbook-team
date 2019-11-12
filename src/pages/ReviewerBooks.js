@@ -2,7 +2,7 @@ import React from 'react'
 import Data from './reviewer_page/data/reviewer_data'
 import {withRouter} from 'react-router-dom'
 import BR_ReviewerList from './reviewer_page/BR_ReviewerList'
-import BR_Bookcase from './reviewer_page/BR_BookcaseList'
+import BR_BookcaseList from './reviewer_page/BR_BookcaseList'
 import BR_BookcaseHot from './reviewer_page/BR_BookcaseHot'
 import axios from 'axios';
 
@@ -47,45 +47,50 @@ class ReviewerBooks extends React.Component {
     }
 
     if(!reviewerData){
-        return(
+      return(
         <>
         <h1>找不到資料<br/></h1>
         <button onClick={()=>this.props.history.push('/reviewer')}>回到首頁</button>
         </>
         )}
-
-        {this.state.brData.map(({ bookcase })=>(
-          console.log('書評家的書籍列'+bookcase)
-          ))}
-    return (
-        <>
+        
+        // 書櫃裡的書
+        let as = reviewerData.bookcase
+        console.log('AAA'+as)
+        // as.forEach(element => {
+        //   console.log('AAA'+as)
+        // });
+          return (
+            <>
         <h1>看看書櫃</h1>
         <section className="reviewerBooks borderLine">
-      
+
         {/* 接應id的書評家個人介紹 */}
         <BR_ReviewerList key={reviewerData.id} 
         id={reviewerData.id} name={reviewerData.name} 
         type={reviewerData.type} level={reviewerData.level} 
         info={reviewerData.info} tube={reviewerData.tube}
-        >
-        </BR_ReviewerList>
+        bookcase={reviewerData.bookcase}
+        ></BR_ReviewerList>
         
+
         {/* 熱門書評列表 */}
         <BR_BookcaseHot />
 
         {/* 接應id的書評家個人書櫃 */}
-        <BR_Bookcase key={reviewerData.id} 
-        id={reviewerData.id} 
-        >
-        </BR_Bookcase>
-
-        {/* {this.state.brData.map(({ bookcase })=>(
-          <BR_Bookcase key={id}
-          id={id}
-        bookcase={bookcase}
-        ></BR_Bookcase>
+        {/* .filter(({name}) => ('阿德' === name)) */}
+        {/* {as.map(({ id, bookcase }) => (
+        <BR_BookcaseList key={id}
+        to={'/ReviewerBooks/' + id}
+        bookcase={reviewerData.bookcase}
+        ></BR_BookcaseList>
         ))} */}
 
+        {as.map((bookcase) => (
+        <BR_BookcaseList 
+        bookcase={bookcase}
+        ></BR_BookcaseList>
+        ))}
         </section>
         </>
     )
